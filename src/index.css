@@ -20,6 +20,7 @@
   background-color: #9e3c9834;
   box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
+  overflow-y: scroll;
 }
 h1 {
   color: 0, 0, 0, 0.87;
@@ -131,10 +132,21 @@ ol li {
 
 @media (max-width: 768px) {
   .center_div {
-    width: 55%;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .todo_item {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .todo_item .fa-times {
-    margin: 0 15px 0 15px;
+    margin: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,6 +156,7 @@ ol li {
     min-height: 40px;
     height: 40px;
     color: #fff;
-    font-size: 30px;
+    font-size: 24px;
+    padding: 5px 10px;
   }
 }
