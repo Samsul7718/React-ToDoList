@@ -29,7 +29,7 @@ const ToDoList = ({
 
   return (
     <div className="todo_item">
-      <div className="text_style">
+      <div className="todo_item_text ">
         {isEditing ? (
           <input
             type="text"
@@ -43,27 +43,27 @@ const ToDoList = ({
           </li>
         )}
       </div>
-      <div className="button">
+      <div className="todo_item_buttons">
         <span onClick={() => toggleChecked(index)}>
           <CheckCircleIcon
             style={{
               backgroundColor: checked ? "#0d8f23" : "#18121f",
             }}
-            className="checkIcon"
+            className="checkIcon button"
           />
         </span>
         {isEditing ? (
           <span onClick={handleSave}>
-            <SaveIcon className="saveIcon" />
+            <SaveIcon className="saveIcon button" />
           </span>
         ) : (
           <span onClick={handleEdit}>
-            <EditIcon className="editIcon" />
+            <EditIcon className="editIcon button" />
           </span>
         )}
 
         <span onClick={() => deleteTask(index)}>
-          <DeleteIcon className="deleteIcon" />
+          <DeleteIcon className="deleteIcon button" />
         </span>
       </div>
     </div>

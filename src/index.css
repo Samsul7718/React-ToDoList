@@ -126,7 +126,7 @@ ol li {
   color: rgb(142, 156, 145);
   box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
 }
-.todo_item.fa-times:hover .list_style {
+.todo_item .list_style {
   color: crimson;
 }
 
@@ -137,26 +137,36 @@ ol li {
     margin: 0 auto;
   }
   .todo_item {
+    display: flex;
+    flex-direction: column; /* Stack content and buttons vertically */
+    align-items: flex-start;
+    padding: 10px;
+    /* background-color: #f9f9f9; */
+    margin-bottom: 10px;
+    border-radius: 8px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
-  .todo_item .fa-times {
-    margin: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .todo_item_text {
+    width: 100%;
+    word-break: break-word;
+    margin-bottom: 10px;
   }
-  button {
-    margin-left: 5px;
-    min-height: 40px;
-    height: 40px;
-    color: #fff;
-    font-size: 24px;
-    padding: 5px 10px;
+  .todo_item_buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Buttons wrap if there's not enough space */
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .todo_item_buttons button {
+    min-height: 36px;
+    height: auto;
+    padding: 5px 12px;
+    font-size: 16px;
+    flex: 1 1 auto;
+    max-width: 100px;
   }
 }
