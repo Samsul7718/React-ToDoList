@@ -24,7 +24,7 @@ function ToDo() {
     if (inputData.trim() !== "") {
       setNewItem((prev) => [...prev, { text: inputData, checked: false }]);
       setInputData("");
-      console.log("stp num 3 ",inputData);
+      console.log("step num 3 ",inputData);
       
     }
   };
